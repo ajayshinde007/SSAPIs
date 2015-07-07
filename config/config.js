@@ -8,7 +8,7 @@ var config = {
     app: {
       name: 'ssapis'
     },
-    port: 3000,
+    port: 8080,
     db: 'mongodb://localhost/ssapidb'
   },
 
@@ -17,7 +17,7 @@ var config = {
     app: {
       name: 'ssapis'
     },
-    port: 3000,
+    port: 8080,
     db: 'mongodb://localhost/ssapidb'
   },
 
@@ -26,7 +26,7 @@ var config = {
     app: {
       name: 'ssapis'
     },
-    port: 3000,
+    port: 8080,
     db: 'mongodb://localhost/ssapidb'
   }
 };
