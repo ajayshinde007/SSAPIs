@@ -25,7 +25,7 @@ router.get('/', function (req, res, next) {
 router.post('/', function (req, res, next) {
   var gl = req.body;
   var groceryList = new GroceryList();
-  groceryList.status = "InProgress";
+  groceryList.status =  gl.status;
   groceryList.listName = gl.listName;
 
   groceryList.save(function (err, data) {
