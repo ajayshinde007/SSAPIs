@@ -8,7 +8,12 @@ module.exports = function (app) {
 };
 
 router.get('/', function (req, res, next) {
-  GroceryList.find(function (err, groceryLists) {
+  var filters = {}
+  if(req.query.status !=  undefined){
+    filters = {status:req.query.status};
+  }
+
+  GroceryList.find(filters,function (err, groceryLists) {
     if (err) return next(err);
 
     res.send(groceryLists);
