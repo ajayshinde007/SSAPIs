@@ -25,17 +25,24 @@ router.post('/:id/items/', function (req, res, next) {
   groceryListItem.barCode = gli.barCode;
   groceryListItem.price = gli.price;
   groceryListItem.status = gli.status;
-  groceryListItem.date = gli.listName;
-  console.log(JSON.stringify(groceryListItem));
+  groceryListItem.listName = gli.listName;
+  groceryListItem.itemNo = gli.itemNo;
+  groceryListItem.itemName = gli.itemName;
+  groceryListItem.itemDescription = gli.itemDescription;
+  groceryListItem.quantity = gli.quantity;
+  groceryListItem.totalCost = gli.totalCost;
 
 
-  /*
+
   groceryListItem.save(function (err, data) {
     if (err) {
-      return next(err);
-    }
+      console.log(err);
 
-  });*/
+      return;
+    }
+    //console.log(data);
+
+  });
   res.send(groceryListItem);
 
   return;

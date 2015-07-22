@@ -4,10 +4,15 @@ var mongoose = require('mongoose'),
 var GroceryItemSchema = new Schema({
   id: Schema.Types.ObjectId,
   listName: String,
+  itemNo:Number,
+  itemName:String,
+  itemDescription:String,
   barCode: String,
-  price: String,
+  price: Number,
+  totalCost:Number,
+  quantity:Number,
   status: String,
-  date: {type: Date, default: Date.now}
+  creationDate: {type: Date, default: Date.now}
 });
 
 mongoose.model('GroceryItem', GroceryItemSchema);
