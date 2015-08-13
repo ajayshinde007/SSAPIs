@@ -12,6 +12,7 @@ var GroceryItemSchema = new Schema({
   totalCost:Number,
   quantity:Number,
   status: String,
+  thumbnailImage:String,
   creationDate: {type: Date, default: Date.now}
 });
 
